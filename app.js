@@ -11,7 +11,8 @@ const searchSong = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displaySongs(data.data))
-        .catch(error => displayError())
+        
+        .catch(error => displayError('Something Went Wrong!! Please try again later!'));
 }
 
 const displaySongs = songs => {
